@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from midcentury.models import Collection
 
 
 def index_view(request):
@@ -10,4 +11,5 @@ def about_me(request):
 
 
 def collection(request):
-    return render(request, "collection.html", {})
+    vintage_ads = Collection.objects.all()
+    return render(request, "collection.html", {"ads": vintage_ads})

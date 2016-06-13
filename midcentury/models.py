@@ -7,3 +7,5 @@ class Collection(models.Model):
     image_src = models.URLField()
     desc = models.TextField()
 
+    def __str__(self):
+        return self.title
