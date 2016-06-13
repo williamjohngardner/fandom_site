@@ -1,3 +1,5 @@
 from django.contrib import admin
+from midcentury.models import Collection
 
-# Register your models here.
+
+admin.site.register(Collection)
